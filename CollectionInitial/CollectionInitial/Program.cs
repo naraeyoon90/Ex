@@ -40,6 +40,31 @@ namespace CollectionInitial
             Queue queue = new Queue(array);
             foreach (object obj in queue)
                 Console.WriteLine($"Queue : {obj}");
+
+
+            Console.WriteLine();
+
+            // HashTable을 초기화할 때 딕셔너리 초기자 Dictionary Initializer를 이용할 수 있음
+            // 방법1
+            Hashtable ht = new Hashtable()
+            {
+                ["sel"] = "서울",
+                ["inc"] = "인천",
+                ["kwa"] = "광주"
+            };
+
+            Console.WriteLine(ht["sel"]);
+            Console.WriteLine(ht["kwa"]);
+            
+            // 방법2
+            Hashtable ht2 = new Hashtable()
+            {
+                { "sel", "서울"},
+                { "kwa", "광주"}
+            };
+            Console.WriteLine(ht["sel"]);
+            Console.WriteLine(ht["kwa"]);
+
         }
     }
 }
